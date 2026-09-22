@@ -72,9 +72,19 @@ behind the client portal. `public/_redirects` returns **410 Gone** for
 
 ## Deploying
 
-Client-routed SPA. `public/_redirects` carries the §06 301 map plus the
-`/*  /index.html  200` fallback (Netlify format). On another host, reproduce both
-— without the fallback a hard refresh on `/services` 404s at the server.
+This is a build, not a static folder — serving the repo root gives a white screen,
+because `index.html` there points at `/src/main.jsx`, which no browser can run.
+Run `npm run dev`, or `npm run build` and serve `dist/`.
+
+GitHub Pages publishes `dist/` via `.github/workflows/deploy.yml` on every push to
+`main` (Pages source must be set to **GitHub Actions**, not a branch). The site sits
+at `/hawkeye/`, so `vite.config.js` sets `base` to match and the router takes its
+`basename` from it; set `VITE_BASE=/` to build for a domain root instead.
+
+Client-routed SPA, so a hard refresh on `/services` needs a server-side fallback.
+The build writes `404.html` as a copy of `index.html`, which is how Pages serves one.
+`public/_redirects` carries the same fallback plus the §06 301 map in Netlify format;
+on another host, reproduce both.
 
 ## Structure
 
