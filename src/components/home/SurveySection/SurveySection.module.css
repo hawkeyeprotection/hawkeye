@@ -1,0 +1,204 @@
+.section {
+  background: #fff;
+  padding: clamp(72px, 9vw, 128px) var(--he-gutter);
+  border-top: 1px solid var(--he-line-light);
+}
+
+.grid {
+  max-width: var(--he-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  gap: clamp(36px, 5vw, 80px);
+}
+
+.eyebrow {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-red-deep);
+  margin-bottom: 18px;
+}
+
+.heading {
+  font-family: var(--he-font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(38px, 5.2vw, 78px);
+  line-height: 0.84;
+  color: var(--he-ink);
+}
+
+.lede {
+  margin-top: 22px;
+  font-size: clamp(15px, 1.2vw, 17.5px);
+  line-height: 1.6;
+  color: var(--he-text-body);
+  max-width: 44ch;
+}
+
+.contactBlock {
+  margin-top: 32px;
+  display: grid;
+  gap: 16px;
+  border-top: 1px solid var(--he-line-light);
+  padding-top: 26px;
+}
+
+.contactLabel {
+  font-family: var(--he-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--he-text-muted);
+}
+
+.contactValue {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--he-ink);
+}
+
+.panel {
+  background: var(--he-surface);
+  border: 1px solid var(--he-line-light);
+  padding: clamp(24px, 3vw, 38px);
+}
+
+.moreLink {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--he-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--he-red-deep);
+  border-bottom: 1px solid var(--he-line-light);
+  padding-bottom: 4px;
+}
+
+.moreLink:hover {
+  border-bottom-color: var(--he-red);
+}
+
+/* --- survey form (Home design) --- */
+.confirmation { padding: 40px 0; }
+
+.confirmationTitle {
+  font-family: var(--he-font-display);
+  font-weight: 800;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: var(--he-ink);
+  line-height: .95;
+}
+
+.confirmationBody {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--he-text-body);
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.stepLabel {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-red-deep);
+}
+
+.stepName {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  color: var(--he-text-muted);
+}
+
+.progress { margin-top: 12px; display: flex; gap: 4px; }
+
+.segment { flex: 1; height: 2px; background: var(--he-line-light); }
+.segmentActive { background: var(--he-red); }
+
+.fieldset { margin-top: 28px; display: grid; gap: 16px; }
+
+.field { display: block; }
+
+.fieldLabel {
+  display: block;
+  font-family: var(--he-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--he-text-input);
+  margin-bottom: 7px;
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--he-border-input);
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--he-ink);
+  background: #fff;
+}
+
+.input:focus-visible,
+.select:focus-visible {
+  outline: 2px solid var(--he-red);
+  outline-offset: 1px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+
+.buttonPrimary {
+  background: var(--he-ink);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 26px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.buttonPrimary:hover { background: var(--he-red); }
+
+.buttonSubmit {
+  background: var(--he-red);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 28px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.buttonSubmit:hover { background: var(--he-ink); }
+
+.buttonSecondary {
+  background: none;
+  border: 1px solid var(--he-border-input);
+  color: var(--he-ink);
+  cursor: pointer;
+  padding: 15px 22px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.buttonStart { margin-top: 4px; justify-self: start; }
+
+.demoNote { font-size: 12px; color: var(--he-text-muted); }

@@ -1,0 +1,405 @@
+/* Ported 1:1 from Contact.dc.html */
+
+.hero {
+  background: #0B1220;
+  padding: clamp(52px,7vw,96px) clamp(18px,3vw,40px) 0;
+}
+
+.heroInner { max-width: 1320px; margin: 0 auto; }
+
+.heroEyebrow {
+  font-family: 'Martian Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: #FF6A55;
+}
+
+.heroTitle {
+  margin-top: 20px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(48px,9.6vw,158px);
+  line-height: 0.78;
+  letter-spacing: -0.014em;
+}
+
+.heroAccent { color: #FF4A31; }
+
+.heroLede {
+  margin-top: 22px;
+  max-width: 52ch;
+  font-size: clamp(16px,1.3vw,18.5px);
+  line-height: 1.55;
+  color: #C3CFE3;
+}
+
+/* --- three contact tiles --- */
+.tiles {
+  margin-top: clamp(30px,4vw,52px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,240px), 1fr));
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+.tile,
+.tileMid,
+.tileEnd {
+  display: block;
+  color: #fff;
+}
+
+.tile { padding: 24px 22px 26px 0; }
+
+.tileMid {
+  padding: 24px 22px 26px;
+  border-left: 1px solid rgba(255,255,255,.14);
+}
+
+.tileEnd {
+  padding: 24px 0 26px 22px;
+  border-left: 1px solid rgba(255,255,255,.14);
+}
+
+.tile:hover,
+.tileMid:hover,
+.tileEnd:hover { color: #FF6A55; }
+
+.tileLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  color: #8EA0BF;
+}
+
+.tileValue {
+  margin-top: 10px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px,2.8vw,38px);
+  line-height: 1;
+  color: inherit;
+}
+
+.tileEmail {
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.35;
+  color: inherit;
+  word-break: break-word;
+}
+
+/* --- form + info column --- */
+.main {
+  background: #F7F8FA;
+  padding: clamp(44px,6vw,80px) clamp(18px,3vw,40px) clamp(56px,7vw,100px);
+}
+
+.mainInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.formCard {
+  flex: 2 1 460px;
+  min-width: 0;
+  background: #fff;
+  box-shadow: 0 0 0 1px #DDE2EB;
+  padding: clamp(24px,3vw,40px);
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.stepHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.stepLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #B4231A;
+}
+
+.stepName {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  color: #6C7789;
+}
+
+.progress {
+  margin-top: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.seg,
+.segOn {
+  flex: 1;
+  height: 2px;
+  transition: background .3s ease;
+}
+
+.seg { background: #DDE2EB; }
+.segOn { background: #D0231A; }
+
+.fields {
+  margin-top: 28px;
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  flex: 1;
+}
+
+.field { display: block; }
+
+.label {
+  display: block;
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #6C7789;
+  margin-bottom: 7px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #CFD6E2;
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #10182A;
+  background: #fff;
+}
+
+.textarea { resize: vertical; }
+
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
+  outline: 2px solid #D0231A;
+  outline-offset: 1px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.fieldRowTight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.buttonNext {
+  margin-top: 4px;
+  justify-self: start;
+  background: #10182A;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 26px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: background .25s ease;
+}
+
+.buttonNext:hover { background: #D0231A; }
+
+.buttonGhost {
+  background: none;
+  border: 1px solid #CFD6E2;
+  color: #10182A;
+  cursor: pointer;
+  padding: 15px 22px;
+  border-radius: 2px;
+  font-size: 14.5px;
+}
+
+.buttonSubmit {
+  background: #D0231A;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 28px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: background .25s ease;
+}
+
+.buttonSubmit:hover { background: #10182A; }
+
+.demoNote {
+  font-size: 12px;
+  color: #8894A8;
+}
+
+/* --- confirmation --- */
+.done {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.doneTitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: clamp(34px,4vw,54px);
+  text-transform: uppercase;
+  color: #10182A;
+  line-height: .92;
+}
+
+.doneBody {
+  margin-top: 14px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #4C566B;
+  max-width: 46ch;
+}
+
+.done .buttonGhost {
+  margin-top: 24px;
+  align-self: flex-start;
+}
+
+/* --- side column --- */
+.side {
+  flex: 1 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.urgent {
+  background: #10182A;
+  padding: clamp(22px,2.6vw,30px);
+}
+
+.urgentLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #FF6A55;
+}
+
+.urgentTitle {
+  margin-top: 12px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px,2.6vw,34px);
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 0.96;
+}
+
+.urgentBody {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #8EA0BF;
+}
+
+.urgentCta {
+  display: inline-block;
+  margin-top: 18px;
+  background: #D0231A;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.urgentCta:hover { background: #fff; color: #10182A; }
+
+.infoCard {
+  background: #fff;
+  box-shadow: 0 0 0 1px #DDE2EB;
+  padding: clamp(22px,2.6vw,30px);
+}
+
+.infoLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #8894A8;
+}
+
+.infoAddress {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #10182A;
+}
+
+.infoHours {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #E6EAF2;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4C566B;
+}
+
+.workTitle {
+  margin-top: 12px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #10182A;
+  line-height: 1;
+}
+
+.workBody {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4C566B;
+}
+
+.officeSlot {
+  flex: 1 1 auto;
+  min-height: 220px;
+  position: relative;
+  background: #E4E8EF;
+  overflow: hidden;
+}
+
+.officeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

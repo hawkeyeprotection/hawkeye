@@ -1,0 +1,96 @@
+.footer {
+  background: var(--he-night);
+  color: #fff;
+  padding: clamp(48px, 6vw, 72px) var(--he-gutter) 28px;
+}
+
+.grid {
+  max-width: var(--he-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 36px;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.blurb {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--he-text-dim);
+  max-width: 34ch;
+}
+
+.columnTitle {
+  font-family: var(--he-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--he-coral);
+}
+
+.linkList {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.link {
+  color: var(--he-text-dim);
+}
+.link:hover {
+  color: #fff;
+}
+
+.registration {
+  margin-top: 14px;
+  font-family: var(--he-font-mono);
+  font-size: 10.5px;
+  line-height: 2;
+  color: var(--he-text-dim);
+}
+
+.licensedIn {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--he-text-dim);
+}
+
+.reachAddress {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--he-text-dim);
+}
+
+.reachContact {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.reachLink {
+  color: #fff;
+}
+.reachLink:hover {
+  color: #fff;
+}
+
+.bottomBar {
+  max-width: var(--he-max-width);
+  margin: 36px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--he-line-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  color: var(--he-text-faint);
+}

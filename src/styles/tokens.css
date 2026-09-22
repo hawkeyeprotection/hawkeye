@@ -1,0 +1,35 @@
+:root {
+  --he-ink: #10182a;
+  --he-night: #0b1220;
+  --he-panel: #10182a;
+  --he-surface: #f7f8fa;
+  --he-white: #ffffff;
+  --he-red: #d0231a;
+  --he-red-deep: #b4231a;
+  --he-red-bright: #ff4a31;
+  --he-coral: #ff6a55;
+  --he-line-dark: rgba(255, 255, 255, 0.12);
+  --he-line-dark-soft: rgba(255, 255, 255, 0.09);
+  --he-line-light: #dde2eb;
+  --he-text-body: #4c566b;
+  --he-text-dim: #8ea0bf;
+  --he-text-faint: #6e7f9e;
+  --he-text-muted: #8894a8;
+  --he-text-input: #6c7789;
+  --he-border-input: #cfd6e2;
+  --he-green-live: #3fcf8e;
+
+  /* Uniform Blue from the dossier design system: links, active sub-tabs and a
+     single bento tile. Red stays the CTA colour; blue never competes with it. */
+  --he-blue: #2350b8;
+  --he-blue-bright: #86a6ff;
+  --he-blue-soft: #e3eaf8;
+  --he-parade-grey: #f3f5f9;
+
+  --he-font-display: 'Big Shoulders Display', sans-serif;
+  --he-font-body: 'Instrument Sans', system-ui, sans-serif;
+  --he-font-mono: 'Martian Mono', monospace;
+
+  --he-max-width: 1320px;
+  --he-gutter: clamp(18px, 3vw, 40px);
+}

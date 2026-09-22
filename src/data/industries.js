@@ -1,0 +1,51 @@
+/** §07: 6 image tiles, each with the matching client name. Derived from the real client list. */
+export const INDUSTRIES = [
+  {
+    slug: 'hospitals',
+    tag: 'HOSPITALS & HEALTHCARE',
+    title: 'Casualty never closes',
+    body: 'OPD crowd handling, attendant passes, night ward rounds, ambulance lane discipline, female guards for wards.',
+    client: 'ON POST · HOLY FAMILY HOSPITAL',
+    posts: ['Casualty and OPD gate', 'Attendant pass counter', 'Night ward rounds', 'Ambulance lane'],
+  },
+  {
+    slug: 'institutions',
+    tag: 'INSTITUTIONS',
+    title: 'Members, not visitors',
+    body: 'Member recognition, guest registers, seminar and banquet cover, VIP arrivals, quiet-house conduct.',
+    client: 'ON POST · INDIA INTERNATIONAL CENTRE',
+    posts: ['Member gate', 'Guest register desk', 'Banquet and seminar cover', 'VIP arrival'],
+  },
+  {
+    slug: 'retail-food',
+    tag: 'RETAIL & FOOD',
+    title: 'Footfall and float',
+    body: 'Queue management, pilferage control, closing-time cash escort, armed cover for jewellery counters.',
+    client: "ON POST · MCDONALD'S · BIKANERVALA · M.P. JEWELLERS",
+    posts: ['Shop floor', 'Queue and door', 'Closing cash escort', 'Armed counter cover'],
+  },
+  {
+    slug: 'showrooms',
+    tag: 'AUTOMOBILE SHOWROOMS',
+    title: 'Keys and display floors',
+    body: 'Display-floor watch, test-drive key control, workshop gate passes, customer parking marshals.',
+    client: 'ON POST · GALAXY TOYOTA · CHARU MOTORS',
+    posts: ['Display floor', 'Key control', 'Workshop gate', 'Parking marshal'],
+  },
+  {
+    slug: 'corporate-it',
+    tag: 'CORPORATE & IT',
+    title: 'Access is the product',
+    body: 'Badge and visitor control, vehicle logs, material movement, night rounds, evacuation wardens.',
+    client: 'ON POST · WIPRO',
+    posts: ['Reception and badge desk', 'Vehicle gate', 'Material movement', 'Floor wardens'],
+  },
+  {
+    slug: 'banks-schools',
+    tag: 'BANKS & SCHOOLS',
+    title: 'Dispersal and strong rooms',
+    body: 'Gate discipline at dispersal, parent verification, strong-room and ATM cover, cash-handling escort.',
+    client: 'ON POST · ITL PUBLIC SCHOOL · BOMBAY MERCANTILE BANK',
+    posts: ['Dispersal gate', 'Parent verification', 'Strong room and ATM', 'Cash escort'],
+  },
+]

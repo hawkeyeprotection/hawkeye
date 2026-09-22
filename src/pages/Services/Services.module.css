@@ -1,0 +1,318 @@
+/* Ported 1:1 from Services.dc.html */
+
+.hero {
+  background: #0B1220;
+  padding: clamp(56px,7.5vw,104px) clamp(18px,3vw,40px);
+}
+
+.heroInner { max-width: 1320px; margin: 0 auto; }
+
+.heroEyebrow {
+  font-family: 'Martian Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: #FF6A55;
+}
+
+.heroTitle {
+  margin-top: 22px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(52px,10.5vw,170px);
+  line-height: 0.78;
+  letter-spacing: -0.014em;
+}
+
+.heroAccent { color: #FF4A31; }
+
+/* --- explorer --- */
+.explorer {
+  background: #F7F8FA;
+  padding: clamp(48px,6vw,84px) clamp(18px,3vw,40px) clamp(64px,8vw,116px);
+}
+
+.explorerInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(22px,3vw,48px);
+  align-items: flex-start;
+}
+
+.rail {
+  flex: 1 1 260px;
+  min-width: 0;
+  max-width: 360px;
+}
+
+.railLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #B4231A;
+}
+
+.railList {
+  margin-top: 16px;
+  border-top: 1px solid #DDE2EB;
+}
+
+.railRow,
+.railRowOpen {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #DDE2EB;
+  cursor: pointer;
+  transition: color .25s ease;
+}
+
+.railRow { color: #4C566B; }
+.railRowOpen { color: #10182A; }
+.railRow:hover { color: #10182A; }
+
+.railIndex {
+  font-family: 'Martian Mono', monospace;
+  font-size: 10px;
+  color: #8894A8;
+  flex: 0 0 28px;
+  text-align: left;
+}
+
+.railTitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(20px,2.2vw,28px);
+  line-height: 1;
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.railMark {
+  font-family: 'Martian Mono', monospace;
+  font-size: 12px;
+  color: #D0231A;
+  flex: 0 0 auto;
+}
+
+.panelWrap {
+  flex: 3 1 420px;
+  min-width: 0;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #DDE2EB;
+  padding: clamp(24px,3vw,40px);
+}
+
+.panelTag {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #B4231A;
+}
+
+.panelTitle {
+  margin-top: 14px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(32px,4.2vw,58px);
+  line-height: 0.88;
+  color: #10182A;
+  max-width: 20ch;
+}
+
+.panelIntro {
+  margin-top: 16px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #4C566B;
+  max-width: 60ch;
+}
+
+.panelCards {
+  margin-top: clamp(24px,3vw,36px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,230px), 1fr));
+  gap: 1px;
+}
+
+.panelCard {
+  background: #fff;
+  box-shadow: 0 0 0 1px #DDE2EB;
+  padding: 24px;
+}
+
+.panelCardAlt {
+  background: #F7F8FA;
+  box-shadow: 0 0 0 1px #DDE2EB;
+  padding: 24px;
+}
+
+.panelCardLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #D0231A;
+}
+
+.panelCardLabelAlt {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #6E7A8E;
+}
+
+.panelCardBody {
+  margin-top: 12px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4C566B;
+}
+
+.quote {
+  margin-top: clamp(22px,3vw,32px);
+  background: #10182A;
+  padding: 26px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.quoteText {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #fff;
+  flex: 1 1 240px;
+  line-height: 1;
+}
+
+.quoteCta {
+  background: #D0231A;
+  color: #fff;
+  padding: 15px 24px;
+  border-radius: 2px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.quoteCta:hover { background: #fff; color: #10182A; }
+
+.quotePhone {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.26);
+  padding: 14px 22px;
+  border-radius: 2px;
+  font-size: 14.5px;
+}
+
+.quotePhone:hover { background: rgba(255,255,255,.1); color: #fff; }
+
+/* --- photo band --- */
+.band {
+  background: #F7F8FA;
+  padding: 0 clamp(18px,3vw,40px) clamp(56px,7vw,100px);
+}
+
+.bandInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 21 / 9;
+  background: #E4E8EF;
+  overflow: hidden;
+}
+
+.bandImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- support staff --- */
+.support {
+  background: #10182A;
+  padding: clamp(52px,6.5vw,92px) clamp(18px,3vw,40px);
+}
+
+.supportInner { max-width: 1320px; margin: 0 auto; }
+
+.supportLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #FF6A55;
+}
+
+.supportHeading {
+  margin-top: 18px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(34px,4.6vw,66px);
+  line-height: 0.86;
+  color: #fff;
+  max-width: 20ch;
+}
+
+.supportGrid {
+  margin-top: clamp(28px,4vw,48px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,240px), 1fr));
+  gap: 12px;
+}
+
+.supportCard {
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 26px;
+}
+
+.supportCardTitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.supportCardBody {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #8EA0BF;
+}
+
+.supportCta {
+  border: 1px solid #D0231A;
+  background: #D0231A;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.supportCtaButton {
+  align-self: flex-start;
+  background: #fff;
+  color: #10182A;
+  padding: 13px 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.supportCtaButton:hover { background: #10182A; color: #fff; }

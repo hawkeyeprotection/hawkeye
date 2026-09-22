@@ -1,0 +1,47 @@
+/* Shared keyframes — global (unscoped) so any CSS Module can reference them by name. */
+
+@keyframes heSlat {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0); }
+}
+@keyframes heRise {
+  from { transform: translateY(105%) skewY(3deg); }
+  to { transform: none; }
+}
+@keyframes heFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes heFocus {
+  from { opacity: 0; transform: scale(1.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes heScan {
+  0% { top: -2%; opacity: 0; }
+  8% { opacity: .85; }
+  92% { opacity: .85; }
+  100% { top: 102%; opacity: 0; }
+}
+@keyframes heMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes heBlink {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: .25; }
+}
+@keyframes heSwap {
+  from { opacity: 0; transform: translateY(10px) scale(.985); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes heDrift {
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to { transform: scale(1.16) translate3d(-1.5%, -1.5%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,0 +1,138 @@
+.section {
+  background: var(--he-surface);
+  padding: clamp(72px, 9vw, 128px) var(--he-gutter);
+}
+
+.inner {
+  max-width: var(--he-max-width);
+  margin: 0 auto;
+}
+
+.introRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(24px, 4vw, 72px);
+  align-items: end;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.eyebrow {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-red-deep);
+  margin-bottom: 18px;
+}
+
+.heading {
+  font-family: var(--he-font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(38px, 5.6vw, 84px);
+  line-height: 0.84;
+  letter-spacing: -0.01em;
+  color: var(--he-ink);
+}
+
+.lede {
+  font-size: clamp(15px, 1.2vw, 17.5px);
+  line-height: 1.6;
+  color: var(--he-text-body);
+  max-width: 44ch;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.rowSecondary {
+  margin-top: 12px;
+}
+
+.tile {
+  margin: 0;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--he-night);
+}
+
+.tileWide {
+  flex: 2 1 460px;
+  min-height: clamp(300px, 36vw, 560px);
+}
+
+.tileNarrow {
+  flex: 1 1 240px;
+  min-height: clamp(300px, 36vw, 560px);
+}
+
+.tileSquare {
+  flex: 1 1 300px;
+  min-height: clamp(210px, 20vw, 300px);
+}
+
+.tileMedia {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filterGate { filter: grayscale(.3) contrast(1.05); }
+.filterNight { filter: grayscale(.4) contrast(1.08) brightness(.85); }
+.filterDrill { filter: contrast(1.06); }
+.filterVault { filter: grayscale(.35) contrast(1.06) brightness(.9); }
+
+.tileCaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: clamp(24px, 2.6vw, 34px);
+  background: linear-gradient(0deg, rgba(11, 18, 32, .92), transparent);
+}
+
+.tileCaptionCompact {
+  padding: 20px;
+}
+
+.tileTag {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-coral);
+}
+
+.tileTitle {
+  margin-top: 8px;
+  font-family: var(--he-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: .94;
+}
+
+.tileTitleLarge {
+  font-size: clamp(28px, 3.1vw, 46px);
+}
+
+.tileTitleSmall {
+  font-size: 22px;
+}
+
+.tileTitleCompact {
+  font-size: 21px;
+}
+
+.footnote {
+  margin-top: 14px;
+  font-family: var(--he-font-mono);
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  color: var(--he-text-muted);
+}

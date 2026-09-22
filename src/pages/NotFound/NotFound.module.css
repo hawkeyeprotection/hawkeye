@@ -1,0 +1,69 @@
+.section {
+  background: var(--he-night);
+  padding: clamp(90px, 12vw, 180px) var(--he-gutter);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  max-width: var(--he-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.eyebrow {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--he-coral);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--he-font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(48px, 8vw, 118px);
+  line-height: 0.82;
+  color: #fff;
+}
+
+.lede {
+  margin-top: 26px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--he-text-dim);
+  max-width: 54ch;
+}
+
+.phone {
+  font-family: var(--he-font-mono);
+  font-size: 15px;
+  color: #fff;
+}
+
+.phone:hover {
+  color: var(--he-coral);
+}
+
+.links {
+  margin-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  border-top: 1px solid var(--he-line-dark);
+  padding-top: 26px;
+}
+
+.link {
+  font-family: var(--he-font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--he-text-dim);
+}
+
+.link:hover {
+  color: #fff;
+}

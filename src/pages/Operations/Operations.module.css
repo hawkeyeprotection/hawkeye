@@ -1,0 +1,397 @@
+/* Ported 1:1 from Operations.dc.html */
+
+.hero {
+  background: #0B1220;
+  padding: clamp(56px,7.5vw,104px) clamp(18px,3vw,40px);
+}
+
+.heroInner { max-width: 1320px; margin: 0 auto; }
+
+.heroEyebrow {
+  font-family: 'Martian Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: #FF6A55;
+}
+
+.heroTitle {
+  margin-top: 22px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(52px,10.5vw,170px);
+  line-height: 0.78;
+  letter-spacing: -0.014em;
+}
+
+.heroAccent { color: #FF4A31; }
+
+/* --- 14-day timeline --- */
+.timeline {
+  background: #F7F8FA;
+  padding: clamp(52px,6.5vw,92px) clamp(18px,3vw,40px);
+}
+
+.timelineInner { max-width: 1320px; margin: 0 auto; }
+
+.timelineLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #B4231A;
+}
+
+.range {
+  margin-top: 18px;
+  width: 100%;
+  accent-color: #D0231A;
+  height: 28px;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #DDE2EB;
+  margin-top: 4px;
+}
+
+.tab,
+.tabOn {
+  flex: 1 1 150px;
+  background: none;
+  border: none;
+  margin-top: -1px;
+  padding: 16px 16px 18px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.tab {
+  border-top: 3px solid transparent;
+  color: #5A6478;
+}
+
+.tabOn {
+  border-top: 3px solid #D0231A;
+  color: #10182A;
+}
+
+.tabDay {
+  display: block;
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.03em;
+  opacity: .8;
+}
+
+.tabLabel {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: clamp(19px,2vw,26px);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.stageGrid {
+  margin-top: clamp(26px,3.5vw,44px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,290px), 1fr));
+  gap: clamp(20px,3vw,48px);
+  align-items: start;
+}
+
+.stageTitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(30px,3.8vw,52px);
+  line-height: 0.88;
+  color: #10182A;
+  max-width: 20ch;
+}
+
+.stageBody {
+  margin-top: 16px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #4C566B;
+  max-width: 48ch;
+}
+
+.stageMeta { border-top: 1px solid #DDE2EB; }
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #DDE2EB;
+}
+
+.metaLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  color: #8894A8;
+}
+
+.metaValue {
+  font-size: 15px;
+  color: #10182A;
+  text-align: right;
+}
+
+/* --- pillars --- */
+.pillars {
+  background: #10182A;
+  padding: clamp(52px,6.5vw,92px) clamp(18px,3vw,40px);
+}
+
+.pillarsInner { max-width: 1320px; margin: 0 auto; }
+
+.pillarsLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #FF6A55;
+}
+
+.pillarGrid {
+  margin-top: clamp(24px,3.5vw,40px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,260px), 1fr));
+  gap: 12px;
+}
+
+.pillar {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.14);
+  padding: 28px;
+}
+
+.pillarTitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+.pillarBody {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8EA0BF;
+}
+
+/* --- control desk band --- */
+.deskBand {
+  background: #10182A;
+  padding: 0 clamp(18px,3vw,40px) clamp(52px,6.5vw,92px);
+}
+
+.deskInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: #0B1220;
+}
+
+.deskVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(.55) contrast(1.08) brightness(.72);
+}
+
+.deskOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(11,18,32,.85), rgba(11,18,32,.1) 70%);
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(20px,3vw,40px);
+}
+
+.deskTag {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #FF6A55;
+}
+
+.deskTitle {
+  margin-top: 10px;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(26px,3.4vw,48px);
+  line-height: 0.92;
+  color: #fff;
+  max-width: 24ch;
+}
+
+/* --- drills --- */
+.drills {
+  background: #F7F8FA;
+  padding: clamp(52px,6.5vw,92px) clamp(18px,3vw,40px);
+}
+
+.drillsInner { max-width: 1320px; margin: 0 auto; }
+
+.drillsHead {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
+  gap: clamp(22px,4vw,56px);
+  align-items: end;
+}
+
+.drillsHeading {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(32px,4.4vw,62px);
+  line-height: 0.86;
+  color: #10182A;
+  max-width: 18ch;
+}
+
+.drillsLede {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #4C566B;
+  max-width: 44ch;
+}
+
+.drillGrid {
+  margin-top: clamp(24px,3.5vw,40px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,280px), 1fr));
+  gap: 10px;
+}
+
+.drillFigure {
+  margin: 0;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0B1220;
+}
+
+.drillSlot {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #E4E8EF;
+  overflow: hidden;
+}
+
+.drillImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drillCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 20px;
+  background: linear-gradient(0deg, rgba(11,18,32,.9), transparent);
+}
+
+.drillTag {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: #FF6A55;
+}
+
+/* --- horizon --- */
+.horizon {
+  background: #F7F8FA;
+  padding: 0 clamp(18px,3vw,40px) clamp(52px,6.5vw,92px);
+}
+
+.horizonInner { max-width: 1320px; margin: 0 auto; }
+
+.horizonLabel {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: #B4231A;
+}
+
+.horizonGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,185px), 1fr));
+  gap: 1px;
+}
+
+.horizonCard {
+  background: #fff;
+  box-shadow: 0 0 0 1px #DDE2EB;
+  padding: 26px 22px;
+}
+
+.horizonWhen,
+.horizonWhenHot {
+  font-family: 'Martian Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
+.horizonWhen { color: #B4231A; }
+.horizonWhenHot { color: #D0231A; }
+
+.horizonBody {
+  margin-top: 12px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #10182A;
+}
+
+/* --- cta --- */
+.cta {
+  background: #D0231A;
+  padding: clamp(48px,6vw,84px) clamp(18px,3vw,40px);
+}
+
+.ctaInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ctaHeading {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(28px,3.6vw,50px);
+  line-height: 0.9;
+  color: #fff;
+  max-width: 22ch;
+}
+
+.ctaButton {
+  background: #fff;
+  color: #10182A;
+  padding: 17px 26px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.ctaButton:hover { background: #10182A; color: #fff; }

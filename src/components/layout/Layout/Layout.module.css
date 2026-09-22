@@ -1,0 +1,26 @@
+.shell {
+  background: var(--he-surface);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell main {
+  flex: 1;
+}
+
+.skipLink {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--he-red);
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skipLink:focus {
+  left: 0;
+}

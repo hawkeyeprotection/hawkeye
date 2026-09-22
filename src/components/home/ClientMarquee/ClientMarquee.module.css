@@ -1,0 +1,80 @@
+.section {
+  background: var(--he-night);
+  border-top: 1px solid var(--he-line-dark);
+  overflow: hidden;
+  padding: clamp(26px, 3.4vw, 44px) 0 clamp(30px, 4vw, 52px);
+}
+
+.heading {
+  max-width: var(--he-max-width);
+  margin: 0 auto;
+  padding: 0 var(--he-gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-text-dim);
+}
+
+.seeLink {
+  font-family: var(--he-font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--he-coral);
+}
+.seeLink:hover {
+  color: #fff;
+}
+
+.track {
+  margin-top: 18px;
+  display: flex;
+  width: max-content;
+  animation: global(heMarquee) 52s linear infinite;
+}
+
+.trackGroup {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 40px);
+  padding-right: clamp(18px, 2.4vw, 40px);
+}
+
+.cell {
+  flex: 0 0 auto;
+  width: clamp(150px, 13vw, 200px);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .78;
+  transition: opacity .3s ease;
+}
+.cell:hover {
+  opacity: 1;
+}
+
+.cellImg {
+  max-height: 34px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cellText {
+  font-family: var(--he-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 19px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
