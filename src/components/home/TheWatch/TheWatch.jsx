@@ -91,7 +91,7 @@ export function TheWatch() {
             <video
               ref={vaultVideoRef}
               className={`${styles.tileMedia} ${styles.filterVault}`}
-              src="https://www.pexels.com/download/video/39060937/"
+              src="https://videos.pexels.com/video-files/7713910/7713910-hd_1280_720_30fps.mp4"
               poster={bannerBriefing}
               autoPlay
               muted
@@ -108,9 +108,6 @@ export function TheWatch() {
           </figure>
         </div>
 
-        <p data-reveal="" className={styles.footnote}>
-          PLACEHOLDER FOOTAGE — TO BE REPLACED WITH HAWK EYE&apos;S OWN SHOOT
-        </p>
       </div>
     </section>
   )

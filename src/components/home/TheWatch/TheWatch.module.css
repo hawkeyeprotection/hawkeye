@@ -131,10 +131,3 @@
   font-size: 21px;
 }
 
-.footnote {
-  margin-top: 14px;
-  font-family: var(--he-font-mono);
-  font-size: 9px;
-  letter-spacing: 0.03em;
-  color: var(--he-text-muted);
-}
