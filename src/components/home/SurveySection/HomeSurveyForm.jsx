@@ -51,6 +51,7 @@ export function HomeSurveyForm() {
               <option>Residential society</option>
               <option>Showroom</option>
               <option>Event</option>
+              <option>Other</option>
             </select>
           </label>
           <label className={styles.field}>

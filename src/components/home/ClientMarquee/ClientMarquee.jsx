@@ -6,7 +6,7 @@ import biotech from '../../../assets/images/clients/client-biotech.png'
 import bombayMercantile from '../../../assets/images/clients/client-bombay-mercantile.png'
 import galaxyToyota from '../../../assets/images/clients/client-galaxy-toyota.png'
 import itl from '../../../assets/images/clients/client-itl.png'
-import mcdonalds from '../../../assets/images/clients/client-mcdonalds.png'
+import mcdonalds from '../../../assets/images/clients/client-mcdonalds.svg'
 import mpJewellers from '../../../assets/images/clients/client-mp-jewellers.png'
 import wipro from '../../../assets/images/clients/client-wipro.png'
 import styles from './ClientMarquee.module.css'
@@ -23,21 +23,14 @@ const CLIENT_LOGOS = {
   biotech,
 }
 
-function ClientCell({ client, decorative }) {
-  if (client.kind === 'text') {
-    return (
-      <div className={styles.cell}>
-        <p className={styles.cellText}>{client.label}</p>
-      </div>
-    )
-  }
+function ClientChip({ client, decorative }) {
   return (
-    <div className={styles.cell}>
-      <img
-        className={styles.cellImg}
-        src={CLIENT_LOGOS[client.key]}
-        alt={decorative ? '' : client.alt}
-      />
+    <div className={styles.chip}>
+      {client.kind === 'text' ? (
+        <p className={styles.chipText}>{client.label}</p>
+      ) : (
+        <img className={styles.chipImg} src={CLIENT_LOGOS[client.key]} alt={decorative ? '' : client.alt} />
+      )}
     </div>
   )
 }
@@ -52,16 +45,18 @@ export function ClientMarquee() {
         </Link>
       </div>
 
-      <div className={styles.track}>
-        <div className={styles.trackGroup}>
-          {CLIENT_ROW.map((client) => (
-            <ClientCell key={client.key} client={client} />
-          ))}
-        </div>
-        <div className={styles.trackGroup} aria-hidden="true">
-          {CLIENT_ROW.map((client) => (
-            <ClientCell key={`${client.key}-dup`} client={client} decorative />
-          ))}
+      <div className={styles.viewport}>
+        <div className={styles.track}>
+          <div className={styles.trackGroup}>
+            {CLIENT_ROW.map((client) => (
+              <ClientChip key={client.key} client={client} />
+            ))}
+          </div>
+          <div className={styles.trackGroup} aria-hidden="true">
+            {CLIENT_ROW.map((client) => (
+              <ClientChip key={`${client.key}-dup`} client={client} decorative />
+            ))}
+          </div>
         </div>
       </div>
     </section>

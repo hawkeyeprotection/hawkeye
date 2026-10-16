@@ -8,15 +8,10 @@ export function SurveySection({ openState }) {
         <div>
           <p className={styles.eyebrow}>05 — START HERE</p>
           <h2 className={styles.heading}>
-            A supervisor
-            <br />
-            walks your site
-            <br />
-            first
+            The area manager walks your site first
           </h2>
           <p className={styles.lede}>
-            No quote before the walk. We look at the perimeter, the posts and the shift pattern,
-            write the scope, and price against it — usually inside two working days.
+            Tell us what you need to protect. We will help you design the right security solution.
           </p>
 
           <div className={styles.contactBlock}>

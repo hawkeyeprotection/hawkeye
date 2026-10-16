@@ -1,10 +1,8 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { SERVICES } from '../../../data/services'
 import styles from './ServicesLedger.module.css'
 
 export function ServicesLedger({ onRequestSurvey }) {
-  const [openIndex, setOpenIndex] = useState(0)
-
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -12,43 +10,37 @@ export function ServicesLedger({ onRequestSurvey }) {
           02 — WHAT WE PUT ON YOUR SITE
         </p>
         <h2 data-reveal="" className={styles.heading}>
-          Eleven roles.
-          <br />
-          One standard.
+          The Hawkeye Standard
         </h2>
+        <p data-reveal="" className={styles.lede}>
+          Trained security personnel and professionally managed security solution for business,
+          institutions and individuals across North India
+        </p>
 
-        <div className={styles.ledger}>
-          {SERVICES.map((service, index) => {
-            const isOpen = openIndex === index
-            return (
-              <button
-                key={service.title}
-                type="button"
-                className={`${styles.row} ${isOpen ? styles.rowOpen : ''}`}
-                onClick={() => setOpenIndex(isOpen ? -1 : index)}
-              >
-                <span className={styles.rowIndex}>{String(index + 1).padStart(2, '0')}</span>
-                <span className={styles.rowTitle}>{service.title}</span>
-                <span className={styles.rowNote}>{isOpen ? service.note : ''}</span>
-                <span className={styles.rowMark}>{isOpen ? '−' : '+'}</span>
-              </button>
-            )
-          })}
-        </div>
+        <ul className={styles.roles}>
+          {SERVICES.map((service, index) => (
+            <li key={service.title} className={styles.role}>
+              <span className={styles.roleIndex}>{String(index + 1).padStart(2, '0')}</span>
+              <span className={styles.roleTitle}>{service.title}</span>
+            </li>
+          ))}
+        </ul>
+        <Link to="/services" className={styles.moreLink}>
+          See every role in detail &rarr;
+        </Link>
 
         <div className={styles.cards}>
           <div className={styles.card}>
-            <p className={styles.cardTitle}>Deployed in about 2 weeks</p>
+            <p className={styles.cardTitle}>Deployment</p>
             <p className={styles.cardBody}>
               Survey, key requirement areas, selection and induction, site-specific training, then
               takeover — with pre-planned audits after.
             </p>
           </div>
           <div className={styles.card}>
-            <p className={styles.cardTitle}>Statutory pack, monthly</p>
+            <p className={styles.cardTitle}>Statutory compliances</p>
             <p className={styles.cardBody}>
-              Wage registers, EPF ECRs, ESIC challans, muster rolls and bonus sheets — issued
-              privately, per client, every month.
+              Need-based, on-request compliance documents available.
             </p>
           </div>
           <div className={styles.cardCta}>

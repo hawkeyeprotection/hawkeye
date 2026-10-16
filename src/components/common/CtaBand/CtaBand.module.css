@@ -15,7 +15,8 @@
 
 .eyebrow {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 600;
   letter-spacing: 0.05em;
   color: var(--he-coral);
   margin-bottom: 16px;

@@ -10,7 +10,8 @@
 
 .eyebrow {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-red-deep);
   margin-bottom: 18px;
@@ -50,7 +51,8 @@
 
 .cardTag {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: 11.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-red-deep);
 }
@@ -82,7 +84,8 @@
   display: inline-block;
   margin-top: clamp(26px, 3vw, 38px);
   font-family: var(--he-font-mono);
-  font-size: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--he-red-deep);

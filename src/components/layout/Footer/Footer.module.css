@@ -28,7 +28,8 @@
 
 .columnTitle {
   font-family: var(--he-font-mono);
-  font-size: 9px;
+  font-size: 11.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-coral);
 }

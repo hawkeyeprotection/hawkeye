@@ -9,16 +9,13 @@
 }
 
 .introRow {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: clamp(24px, 4vw, 72px);
-  align-items: end;
   margin-bottom: clamp(32px, 5vw, 56px);
 }
 
 .eyebrow {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-red-deep);
   margin-bottom: 18px;
@@ -32,13 +29,15 @@
   line-height: 0.84;
   letter-spacing: -0.01em;
   color: var(--he-ink);
+  text-wrap: balance;
 }
 
 .lede {
+  margin-top: clamp(20px, 2.4vw, 32px);
   font-size: clamp(15px, 1.2vw, 17.5px);
   line-height: 1.6;
   color: var(--he-text-body);
-  max-width: 44ch;
+  max-width: 52ch;
 }
 
 .row {
@@ -103,9 +102,12 @@
 
 .tileTag {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: 11.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-coral);
+  /* Keeps the red legible where the footage behind it is bright. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .7);
 }
 
 .tileTitle {

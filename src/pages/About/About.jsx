@@ -6,28 +6,31 @@ import styles from './About.module.css'
 const HERO_IMAGE =
   'https://images.pexels.com/photos/34954627/pexels-photo-34954627.jpeg?auto=compress&cs=tinysrgb&w=1800'
 
+const VISION_IMAGE =
+  'https://images.pexels.com/photos/8285775/pexels-photo-8285775.jpeg?auto=compress&cs=tinysrgb&w=1800'
+
 const LEDGER = [
   { label: 'INCORPORATED', value: '1991', mono: false },
   { label: 'CIN', value: 'U74899DL1991\nPTC043290', mono: true },
   { label: 'LICENCE', value: 'PSARA 2005', mono: false },
-  { label: 'STATUTORY', value: 'EPF · ESIC', mono: false },
+  { label: 'STATUTORY COMPLIANCE', value: 'EPF · ESIC', mono: false },
 ]
 
 const CLAUSES = [
   {
     n: '01',
-    title: 'Registers stay open',
-    body: 'Wage sheets, EPF ECRs, ESIC challans, muster rolls and audit findings are issued to you monthly, in full. Nothing about your own deployment is ours to keep.',
+    title: 'Transparency',
+    body: 'Wage sheets, EPF ECRs, ESIC challans, and muster rolls are issued to you monthly, in full, as per need. Nothing about your own deployment is ours to keep.',
   },
   {
     n: '02',
-    title: 'Somebody is named',
-    body: 'Every post sits under a supervisor, and every supervisor under an operations manager reachable at the control desk. The escalation tree is on your wall with names on it.',
+    title: 'Accountability',
+    body: 'Every post sits under an area officer, and every area officer under an area manager reachable at the control desk. The escalation tree is on your wall with names on it.',
   },
   {
     n: '03',
-    title: 'Guards who stay',
-    body: 'We go the extra mile with our own people, because a site that keeps its faces is a site where visitors are recognised at the gate. On anything affecting staff, management reaches consensus first.',
+    title: 'Security',
+    body: 'Our team understands the place they protect. And behind every dependable team is a management that listens, deliberates, and acts together.',
   },
 ]
 
@@ -36,13 +39,13 @@ const DIRECTORS = [
     img: directorTejbir,
     role: 'FOUNDER · DIN 00002797',
     name: 'Mr. Tejbir Singh',
-    bio: 'B.A., LL.B., PGDSM. Wrote the selection criterion the company still runs on.',
+    bio: 'Founded Hawk Eye in 1991 and wrote the selection criterion every guard is still measured against. B.A., LL.B., PGDSM — he sets the standard the company recruits, trains and deploys to.',
   },
   {
     img: directorSukhbir,
     role: 'ADMINISTRATION · DIN 03569684',
     name: 'Mr. Sukhbir Singh Grewal',
-    bio: 'B.Com., PGDSM. Runs deployment and compliance since October 2010.',
+    bio: 'Has led deployment and compliance since October 2010 — the right people on every post, and the paperwork behind them in order. B.Com., PGDSM.',
   },
 ]
 
@@ -58,7 +61,11 @@ export function About() {
           <p className={styles.heroEyebrow}>
             HAWK EYE PROTECTION SERVICES PVT. LTD. · 27.02.1991
           </p>
-          <h1 className={styles.heroTitle}>We are the company that answers for the post</h1>
+          <h1 className={styles.heroTitle}>
+            We don’t just deploy personnel,
+            <br />
+            we manage responsibility
+          </h1>
         </div>
       </section>
 
@@ -84,18 +91,17 @@ export function About() {
         <div className={styles.areGrid}>
           <div data-reveal="" className={styles.areCard}>
             <p className={styles.areTagLight}>WHAT WE ARE</p>
-            <p className={styles.areTitleLight}>A security management company</p>
+            <p className={styles.areTitleLight}>Your security solutions partners</p>
             <p className={styles.areBodyLight}>
-              High-grade recruitment, three weeks of training by ex-servicemen, and deployment
-              under command and control you are welcome to audit. Value-driven services and
-              modular solutions written against a site survey.
+              We help businesses, institutions and individuals protect people, property and
+              operations through professionally managed security solutions.
             </p>
           </div>
           <div data-reveal="" className={styles.areCardDark}>
             <p className={styles.areTagDark}>WHAT WE ARE NOT</p>
             <p className={styles.areTitleDark}>A body-supply contractor</p>
             <p className={styles.areBodyDark}>
-              We do not quote a per-guard rate before walking your perimeter, do not post an
+              We do not quote a per-guard rate before auditing your perimeter, do not post an
               untrained man to fill a gap, and do not summarise the paperwork instead of handing
               it over.
             </p>
@@ -104,12 +110,15 @@ export function About() {
       </section>
 
       <section className={styles.vision}>
+        <img className={styles.visionImg} src={VISION_IMAGE} alt="" />
+        <div className={styles.visionScrim} />
         <div className={styles.visionInner}>
           <p data-reveal="" className={styles.visionLabel}>
             VISION
           </p>
           <p data-reveal="" className={styles.visionText}>
-            The most professional, ethical and highest-quality security company in the industry.
+            To be a trusted leader in integrated security solutions, combining people, processes, and
+            technology to create safer, smarter, and more secure environments.
           </p>
         </div>
       </section>
@@ -137,6 +146,10 @@ export function About() {
           <p data-reveal="" className={styles.directorsLabel}>
             SIGNED OFF BY
           </p>
+          <p data-reveal="" className={styles.directorsIntro}>
+            Two directors answer for every post we run — one built the company in 1991, the other
+            has run its deployment and compliance since 2010.
+          </p>
           <div className={styles.directorsGrid}>
             {DIRECTORS.map((director) => (
               <figure data-reveal="" key={director.name} className={styles.director}>
@@ -157,7 +170,7 @@ export function About() {
 
       <section className={styles.cta}>
         <div className={styles.ctaInner}>
-          <h2 className={styles.ctaHeading}>A supervisor walks your site before we quote</h2>
+          <h2 className={styles.ctaHeading}>Need security you can rely on?</h2>
           <Link className={styles.ctaButton} to="/contact">
             Request a site survey
           </Link>

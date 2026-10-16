@@ -47,6 +47,18 @@ export function useReveal(resetKey) {
 
     scan()
     const t1 = setTimeout(scan, 600)
+
+    // Sections can mount after the first pass (Home defers everything below the
+    // hero), so pick up any [data-reveal] content that arrives later.
+    let pendingScan = 0
+    const mo = new MutationObserver(() => {
+      if (pendingScan) return
+      pendingScan = requestAnimationFrame(() => {
+        pendingScan = 0
+        scan()
+      })
+    })
+    mo.observe(document.getElementById('main') || document.body, { childList: true, subtree: true })
     const t2 = setTimeout(revealAll, 4000)
 
     const onScroll = () => {
@@ -62,6 +74,8 @@ export function useReveal(resetKey) {
     window.addEventListener('scroll', onScroll, { passive: true })
 
     return () => {
+      mo.disconnect()
+      cancelAnimationFrame(pendingScan)
       clearTimeout(t1)
       clearTimeout(t2)
       window.removeEventListener('scroll', onScroll)

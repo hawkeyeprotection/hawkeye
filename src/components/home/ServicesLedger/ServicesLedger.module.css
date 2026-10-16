@@ -10,7 +10,8 @@
 
 .eyebrow {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-coral);
   margin-bottom: 18px;
@@ -26,66 +27,68 @@
   max-width: 20ch;
 }
 
-.ledger {
-  margin-top: clamp(36px, 5vw, 60px);
+.lede {
+  margin-top: clamp(18px, 2vw, 26px);
+  font-size: clamp(15px, 1.2vw, 17.5px);
+  line-height: 1.6;
+  color: var(--he-text-dim);
+  max-width: 56ch;
+}
+
+.roles {
+  margin-top: clamp(32px, 4vw, 48px);
+  list-style: none;
+  padding: 0;
+  display: grid;
+  /* Eight roles: 4 × 2 on wide screens, 2 × 4 below, so the grid never ends ragged. */
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: clamp(16px, 2vw, 28px);
   border-top: 1px solid var(--he-line-dark);
 }
 
-.row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: clamp(14px, 2vw, 34px);
-  padding: 20px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--he-line-dark);
-  cursor: pointer;
-  color: var(--he-text-dim);
-  transition: padding .25s ease, color .25s ease;
-  text-align: left;
+@media (max-width: 900px) {
+  .roles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.rowOpen {
-  padding: 26px 0;
+.role {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(8px, 1vw, 14px);
+  padding: clamp(14px, 1.6vw, 18px) 0;
+  border-bottom: 1px solid var(--he-line-dark);
+}
+
+.roleIndex {
+  font-family: var(--he-font-mono);
+  font-size: 11px;
+  color: var(--he-text-faint);
+}
+
+.roleTitle {
+  font-family: var(--he-font-display);
+  font-weight: 700;
+  font-size: clamp(17px, 1.8vw, 26px);
+  text-transform: uppercase;
+  line-height: 1.05;
   color: #fff;
 }
 
-.rowIndex {
+.moreLink {
+  display: inline-block;
+  margin-top: clamp(22px, 2.6vw, 30px);
   font-family: var(--he-font-mono);
-  font-size: 10px;
-  letter-spacing: 0.02em;
-  color: var(--he-text-faint);
-  flex: 0 0 34px;
-  text-align: left;
-}
-
-.rowTitle {
-  font-family: var(--he-font-display);
-  font-weight: 700;
-  font-size: clamp(26px, 3.4vw, 46px);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  line-height: 1;
-  text-align: left;
-  flex: 1 1 auto;
-  letter-spacing: -0.005em;
+  color: var(--he-coral);
+  border-bottom: 1px solid var(--he-line-dark);
+  padding-bottom: 4px;
 }
-
-.rowNote {
-  font-size: 14px;
-  color: var(--he-text-dim);
-  flex: 1 1 240px;
-  text-align: left;
-  line-height: 1.45;
-  min-width: 0;
-}
-
-.rowMark {
-  font-family: var(--he-font-mono);
-  font-size: 13px;
-  flex: 0 0 auto;
-  color: var(--he-red);
+.moreLink:hover {
+  border-bottom-color: var(--he-coral);
 }
 
 .cards {

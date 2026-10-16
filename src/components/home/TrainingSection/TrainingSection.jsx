@@ -1,6 +1,4 @@
 import bannerBriefing from '../../../assets/images/banners/banner-briefing.png'
-import bannerDrill from '../../../assets/images/banners/banner-drill.png'
-import { TRAINER_RANKS } from '../../../data/ranks'
 import { useAutoplay } from '../../../hooks/useAutoplay'
 import styles from './TrainingSection.module.css'
 
@@ -9,58 +7,42 @@ export function TrainingSection() {
 
   return (
     <section className={styles.section}>
-      <img className={styles.backdropImg} src={bannerBriefing} alt="" />
-      <div className={styles.backdropOverlay} />
+      <video
+        ref={videoRef}
+        className={styles.bgVideo}
+        src="https://videos.pexels.com/video-files/12761921/12761921-hd_1920_1080_25fps.mp4"
+        poster={bannerBriefing}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+      <div className={styles.overlay} />
 
-      <div className={styles.grid}>
-        <div>
+      <p className={styles.recTag} aria-hidden="true">
+        <span className={styles.recDot} />
+        TRAINING GROUND · REC
+      </p>
+
+      <div className={styles.inner}>
+        <div className={styles.content}>
           <p data-reveal="" className={styles.eyebrow}>
             03 — WHO TRAINS THEM
           </p>
           <h2 data-reveal="" className={styles.heading}>
-            Taught by men
-            <br />
-            who did it
-            <br />
-            in uniform
+            Trained by men who served the nation, to protect you
           </h2>
           <p data-reveal="" className={styles.lede}>
-            Three weeks of daily indoor and outdoor work before a guard reaches your gate — drill,
-            fire, evacuation, bomb-scare search, register discipline, and social responsibility as
-            a module, not an afterthought.
+            Rigorous pre-induction indoor and outdoor training before the guard reaches your gates —
+            pre-induction training builds the basics; on-site training builds familiarity,
+            discipline and response.
           </p>
-          <ul data-reveal="" className={styles.ranks}>
-            {TRAINER_RANKS.map((rank) => (
-              <li key={rank.index} className={styles.rank}>
-                <span
-                  className={`${styles.rankIndex} ${rank.highlight ? styles.rankIndexHighlight : ''}`}
-                >
-                  {rank.index}
-                </span>
-                <span
-                  className={`${styles.rankName} ${rank.highlight ? styles.rankNameHighlight : ''}`}
-                >
-                  {rank.name}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div data-reveal="" className={styles.videoCard}>
-          <video
-            ref={videoRef}
-            className={styles.videoCardMedia}
-            src="https://www.pexels.com/download/video/10476428/"
-            poster={bannerDrill}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-          />
-          <span className={styles.videoCardTagLeft}>PERIMETER · REC</span>
-          <span className={styles.videoCardDot} />
+          <p data-reveal="" className={`${styles.lede} ${styles.ledeStrong}`}>
+            Guards learn the procedures, protocols and responsibilities that matter where they are
+            actually deployed.
+          </p>
         </div>
       </div>
     </section>

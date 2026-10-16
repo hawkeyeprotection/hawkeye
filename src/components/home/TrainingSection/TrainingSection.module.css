@@ -1,38 +1,69 @@
+/* Full-bleed: drill footage fills the section, text sits on the darkened left. */
 .section {
   position: relative;
-  background: var(--he-night);
   overflow: hidden;
+  background: var(--he-night);
+  min-height: clamp(560px, 82vh, 860px);
+  display: flex;
+  align-items: center;
 }
 
-.backdropImg {
+.bgVideo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(.7) brightness(.42);
+  filter: grayscale(.35) contrast(1.08) brightness(.78);
 }
 
-.backdropOverlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(83deg, rgba(11, 18, 32, .96) 18%, rgba(11, 18, 32, .55) 100%);
+  background:
+    linear-gradient(90deg, rgba(11, 18, 32, .95) 0%, rgba(11, 18, 32, .82) 36%, rgba(11, 18, 32, .3) 72%, rgba(11, 18, 32, .5) 100%),
+    linear-gradient(0deg, rgba(11, 18, 32, .85) 0%, rgba(11, 18, 32, 0) 40%);
 }
 
-.grid {
+.recTag {
+  position: absolute;
+  top: clamp(24px, 3vw, 40px);
+  right: var(--he-gutter);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--he-font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, .78);
+}
+
+.recDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--he-red);
+  animation: global(heBlink) 1.6s steps(1, end) infinite;
+}
+
+.inner {
   position: relative;
+  width: 100%;
   max-width: var(--he-max-width);
   margin: 0 auto;
-  padding: clamp(72px, 9vw, 128px) var(--he-gutter);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
+  padding: clamp(96px, 11vw, 160px) var(--he-gutter);
+}
+
+.content {
+  max-width: 720px;
 }
 
 .eyebrow {
   font-family: var(--he-font-mono);
-  font-size: 9.5px;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--he-coral);
   margin-bottom: 18px;
@@ -42,88 +73,29 @@
   font-family: var(--he-font-display);
   font-weight: 800;
   text-transform: uppercase;
-  font-size: clamp(36px, 5vw, 76px);
-  line-height: 0.85;
+  font-size: clamp(40px, 6.2vw, 100px);
+  line-height: 0.86;
   color: #fff;
+  text-wrap: balance;
 }
 
 .lede {
-  margin-top: 22px;
+  margin-top: clamp(20px, 2.4vw, 30px);
   font-size: clamp(15px, 1.2vw, 17.5px);
   line-height: 1.6;
-  color: var(--he-text-dim);
-  max-width: 44ch;
+  color: rgba(255, 255, 255, .78);
+  max-width: 52ch;
 }
 
-.ranks {
-  margin-top: 26px;
-  display: grid;
-  gap: 0;
-  border-top: 1px solid var(--he-line-dark);
-}
-
-.rank {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--he-line-dark);
-}
-
-.rankIndex {
-  font-family: var(--he-font-mono);
-  font-size: 9.5px;
-  color: var(--he-text-faint);
-}
-
-.rankIndexHighlight {
-  color: var(--he-coral);
-}
-
-.rankName {
-  font-family: var(--he-font-display);
-  font-weight: 600;
-  font-size: 21px;
-  text-transform: uppercase;
-  color: var(--he-text-dim);
-}
-
-.rankNameHighlight {
-  font-weight: 700;
+.ledeStrong {
+  margin-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--he-red);
   color: #fff;
 }
 
-.videoCard {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  background: var(--he-panel);
-}
-
-.videoCardMedia {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(.55) contrast(1.1) brightness(.8);
-}
-
-.videoCardTagLeft {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  font-family: var(--he-font-mono);
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, .75);
-}
-
-.videoCardDot {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--he-red);
-  animation: global(heBlink) 1.6s steps(1, end) infinite;
+@media (max-width: 700px) {
+  .overlay {
+    background: linear-gradient(0deg, rgba(11, 18, 32, .92) 0%, rgba(11, 18, 32, .72) 100%);
+  }
 }

@@ -1,3 +1,4 @@
+import { startTransition, useEffect, useState } from 'react'
 import { ClientMarquee } from '../../components/home/ClientMarquee/ClientMarquee'
 import { Hero } from '../../components/home/Hero/Hero'
 import { IndustriesSection } from '../../components/home/IndustriesSection/IndustriesSection'
@@ -12,16 +13,30 @@ import { useSurveyCta } from '../../hooks/useSurveyCta'
 export function Home() {
   const openState = useOpenState()
   const requestSurvey = useSurveyCta()
+  const [showBelowFold, setShowBelowFold] = useState(false)
+
+  // Rendering every section in one pass held the hero's first paint (and so its
+  // intro animation) back until the whole page was built. Paint the hero alone,
+  // then build the rest on the next frame as interruptible work so it can't
+  // stall the intro.
+  useEffect(() => {
+    const id = requestAnimationFrame(() => startTransition(() => setShowBelowFold(true)))
+    return () => cancelAnimationFrame(id)
+  }, [])
 
   return (
     <>
       <Hero onRequestSurvey={requestSurvey} />
-      <ClientMarquee />
-      <TheWatch />
-      <ServicesLedger onRequestSurvey={requestSurvey} />
-      <TrainingSection />
-      <IndustriesSection />
-      <SurveySection openState={openState} />
+      {showBelowFold && (
+        <>
+          <ClientMarquee />
+          <TheWatch />
+          <ServicesLedger onRequestSurvey={requestSurvey} />
+          <TrainingSection />
+          <IndustriesSection />
+          <SurveySection openState={openState} />
+        </>
+      )}
     </>
   )
 }

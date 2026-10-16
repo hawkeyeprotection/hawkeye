@@ -19,17 +19,14 @@ export function TheWatch() {
               01 — THE WATCH
             </p>
             <h2 data-reveal="" className={styles.heading}>
-              Security is a
+              Every post has a person.
               <br />
-              shift, not a
-              <br />
-              subscription
+              Every person has a&nbsp;responsibility.
             </h2>
           </div>
           <p data-reveal="" className={styles.lede}>
-            Cameras record. People intervene. We hold the gate, walk the beat, run the drill and
-            sign the register — and every one of those things is a named person on a shift chart
-            you can see.
+            From the gate to the patrol, every assignment is planned, every shift is documented
+            and every post has a designated person accountable for it.
           </p>
         </div>
 
@@ -69,7 +66,7 @@ export function TheWatch() {
             <figcaption className={styles.tileCaption}>
               <p className={styles.tileTag}>NIGHT BEAT</p>
               <p className={`${styles.tileTitle} ${styles.tileTitleSmall}`}>
-                Rounds on a timed check-in
+                When the light goes out, the watch continues
               </p>
             </figcaption>
           </figure>
@@ -85,7 +82,7 @@ export function TheWatch() {
             <figcaption className={`${styles.tileCaption} ${styles.tileCaptionCompact}`}>
               <p className={styles.tileTag}>OUR TRAINING GROUND</p>
               <p className={`${styles.tileTitle} ${styles.tileTitleCompact}`}>
-                Fire drill, not fire theory
+                Prepared for on-ground realities
               </p>
             </figcaption>
           </figure>

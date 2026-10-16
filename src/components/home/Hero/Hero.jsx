@@ -3,9 +3,9 @@ import { useAutoplay } from '../../../hooks/useAutoplay'
 import styles from './Hero.module.css'
 
 const STATS = [
-  { value: '35', unit: 'yrs', label: 'CONTINUOUS OPERATION' },
+  { value: '35', unit: 'years', label: 'CONTINUOUS OPERATION' },
   { value: '5', unit: 'states', label: 'PSARA 2005 LICENSED' },
-  { value: '3', unit: 'weeks', label: 'TRAINING BEFORE FIRST SHIFT' },
+  { value: '3', unit: 'weeks', label: 'INDUCTION & ON-SITE TRAINING' },
   { value: '24/7', unit: null, label: 'POSTS MANNED & SUPERVISED' },
 ]
 
@@ -72,9 +72,7 @@ export function Hero({ onRequestSurvey }) {
 
         <div className={styles.subRow}>
           <p className={styles.lede}>
-            Guards, supervisors, gunmen and PSOs on post across Delhi NCR — selected on a rigid
-            criterion, trained three weeks by ex-servicemen, and run under command &amp; control
-            you are welcome to audit.
+            You focus on your business. We focus on keeping it secured. Professionally trained, carefully deployed and actively supervised security teams protecting your people, property and premises—around the clock.
           </p>
           <div className={styles.ctaRow}>
             <button type="button" className={styles.primaryCta} onClick={onRequestSurvey}>
