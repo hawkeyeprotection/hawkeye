@@ -170,7 +170,7 @@ export function About() {
 
       <section className={styles.cta}>
         <div className={styles.ctaInner}>
-          <h2 className={styles.ctaHeading}>Need security you can rely on?</h2>
+          <h2 className={styles.ctaHeading}>Choose security you can rely on</h2>
           <Link className={styles.ctaButton} to="/contact">
             Request a site survey
           </Link>

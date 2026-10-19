@@ -6,21 +6,6 @@ import styles from './Services.module.css'
 const BAND_IMAGE =
   'https://images.pexels.com/photos/18313627/pexels-photo-18313627.jpeg?auto=compress&cs=tinysrgb&w=1800'
 
-const SUPPORT = [
-  {
-    title: 'Housekeeping',
-    body: 'Cleaning cycles by area and frequency, washroom checks, waste handling, consumable stock.',
-  },
-  {
-    title: 'Helpers & pantry',
-    body: 'Material handling, pantry service, meeting-room turnaround and despatch support.',
-  },
-  {
-    title: 'Statutory pack',
-    body: 'Wage registers, EPF ECRs, ESIC challans, muster rolls and bonus sheets, issued monthly per client.',
-  },
-]
-
 export function Services() {
   const [active, setActive] = useState(0)
   const role = ROLES[active]
@@ -31,9 +16,9 @@ export function Services() {
         <div className={styles.heroInner}>
           <p className={styles.heroEyebrow}>SERVICES · ELEVEN ROLES, ONE STANDARD</p>
           <h1 className={styles.heroTitle}>
-            A post for
+            A post to
             <br />
-            every <span className={styles.heroAccent}>weak point</span>
+            strengthen <span className={styles.heroAccent}>every point</span>
           </h1>
         </div>
       </section>
@@ -102,31 +87,6 @@ export function Services() {
         </div>
       </section>
 
-      <section className={styles.support}>
-        <div className={styles.supportInner}>
-          <p data-reveal="" className={styles.supportLabel}>
-            ALSO SUPPLIED
-          </p>
-          <h2 data-reveal="" className={styles.supportHeading}>
-            Support staff, on the same statutory footing
-          </h2>
-
-          <div className={styles.supportGrid}>
-            {SUPPORT.map((item) => (
-              <div data-reveal="" key={item.title} className={styles.supportCard}>
-                <p className={styles.supportCardTitle}>{item.title}</p>
-                <p className={styles.supportCardBody}>{item.body}</p>
-              </div>
-            ))}
-            <div data-reveal="" className={styles.supportCta}>
-              <p className={styles.supportCardTitle}>Not sure what the post needs?</p>
-              <Link className={styles.supportCtaButton} to="/contact">
-                Book the survey
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
